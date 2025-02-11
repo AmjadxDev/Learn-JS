@@ -14,4 +14,4 @@
 // console.log("2" === 2); // false === can check also datatype
 
 
-console.log("done");
+// console.log("done"); // 
