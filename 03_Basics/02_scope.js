@@ -19,3 +19,35 @@ var c = 30;
 
 // Scope are different in Node & Brower
 
+
+function one() {
+    const userName = "xon";
+
+    function two() {
+        const website = "youtube";
+        console.log(userName);
+        
+    }
+    // console.log(website);
+    // two();
+}
+
+// one();
+
+// ************************ Hoisting Interesting concept ********************
+
+// function
+console.log(addOne(1));   // this can print
+function addOne(num) { return num +1;}
+
+
+// called expression function
+// console.log(addTwo(4)); // give an error  cannot access before initialization
+const addTwo = function(num) { return num +2; }
+// console.log(addTwo(5));
+
+
+
+
+
+
