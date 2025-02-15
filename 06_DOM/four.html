@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM World</title>
+</head>
+<body style="background-color: black; color:white">
+    <ul class="Languages"> 
+        <li>JavaScript</li>
+    </ul>
+    
+</body>
+<script>
+    function addLanguage(langName) {
+        let createLang = document.createElement('li')
+        createLang.innerHTML = `${langName}`
+        document.querySelector('.Languages').appendChild(createLang)
+    }
+    //addLanguage("Python")
+    //addLanguage("TypeScript")
+
+    function addOptiLang(langName) {
+        let createLi = document.createElement('li');
+        createLi.appendChild(document.createTextNode(langName))
+        document.querySelector('.Languages').appendChild(createLi)
+    }
+
+    addOptiLang('go lang')
+    addOptiLang('kotlin ')
+
+    // Edit
+    let secondLang = document.querySelector('li:nth-child(2)');
+    const newLi= document.createElement('li')
+    newLi.appendChild(document.createTextNode("Mojo"))
+    secondLang.replaceWith(newLi)
+
+    // remove
+    let lastLang = document.querySelector('li:last-child')
+    lastLang.remove() // working 
+
+
+
+</script>
+</html>
