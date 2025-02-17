@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to Coding World</h1>
+    <button id="stop">Stop</button>
+    
+
+    <script>
+        function sayHello() {
+            console.log("Hey boy!")
+        }
+
+        function changeTExt() {
+            document.querySelector('h1').innerHTML = "Best JS Series";
+        }
+        const changeME = setTimeout(changeTExt, 2000) // only give function reference don't execute it
+        
+        document.querySelector("#stop").addEventListener('click', () => {
+            console.log("Stop");
+            clearTimeout(changeME);
+        },false)
+
+        /*setTimeout(() =>{
+            console.log("Xon")
+        }, 2000)*/
+    </script>
+</body>
+</html>
